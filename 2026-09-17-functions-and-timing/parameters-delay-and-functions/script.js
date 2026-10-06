@@ -7,7 +7,7 @@
 // greetUser('Severin');
 
 
-// // ------------------------------- Template literals -------------------------------
+// ------------------------ template literals ------------------------
 
 // // our previous example included a string concatenation.
 
@@ -26,7 +26,7 @@ faveGame('skyrim');
 // myCar('Toyota', 'blue');
 
 
-// // ------------------------------- setTimeout -------------------------------
+// ------------------------ setTimeout ------------------------
 
 // // setTimeout(callback, delay);
 
@@ -37,7 +37,7 @@ faveGame('skyrim');
 // setTimeout(sayHello, 2000);
 
 
-// // ------------------------------- anonymous function -------------------------------
+// ------------------------ anonymous function ------------------------
 
 // // callback = function used as an argument
 // // anonymous function = function without a name

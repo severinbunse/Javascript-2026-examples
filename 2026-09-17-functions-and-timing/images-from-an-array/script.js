@@ -1,4 +1,4 @@
-// --------------------------- adding images and sources ---------------------------
+// ------------------------ adding images and sources ------------------------
 
 // const images = [
 //     'images/154785067c16917dfafeed30dba5a5f8.jpg',
@@ -36,7 +36,7 @@
 // }
 
 
-// --------------------------- adding rotation ---------------------------
+// ------------------------ adding rotation ------------------------
 
 // const images = [
 //     'images/154785067c16917dfafeed30dba5a5f8.jpg',
@@ -75,7 +75,7 @@
 // }
 
 
-// --------------------------- adding delay ---------------------------
+// ------------------------ adding delay ------------------------
 
 // const images = [
 //     'images/154785067c16917dfafeed30dba5a5f8.jpg',
@@ -118,7 +118,7 @@
 // }
 
 
-// --------------------------- adding random rotation ---------------------------
+// ------------------------ adding random rotation ------------------------
 
 
 const images = [
@@ -162,7 +162,7 @@ for (let imageCount = 0; imageCount < 30; imageCount++) {
 }
 
 
-// --------------------------- change color ---------------------------
+// ------------------------ change color ------------------------
 
 // const images = [
 //     'images/154785067c16917dfafeed30dba5a5f8.jpg',
@@ -210,7 +210,7 @@ for (let imageCount = 0; imageCount < 30; imageCount++) {
 // }
 
 
-// --------------------------- different way to write the code (easier to understand) ---------------------------
+// ------------------------ different way to write the code (easier to understand) ------------------------
 
 // const images = [
 //     'images/154785067c16917dfafeed30dba5a5f8.jpg',

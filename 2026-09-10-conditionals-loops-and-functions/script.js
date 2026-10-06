@@ -1,3 +1,5 @@
+// ------------------------ console.log & alert ------------------------
+
 // console.log('Hello World!');
 
 // alert('Hello World!');
@@ -6,6 +8,8 @@
 
 // document.body.style.backgroundColor = 'red';
 
+
+// ------------------------ conditionals ------------------------
 
 // const temperature = 70;
 
@@ -63,7 +67,8 @@
 // }
 
 
-// // Loops
+// ------------------------ loops ------------------------
+
 // let count = 1;
 
 // while (count < 10) {
@@ -89,6 +94,8 @@
 // console.log('Hello ' + username);
 
 
+// ------------------------ functions ------------------------
+
 // function greet() {
 //     console.log('Hello World');
 // }
@@ -110,6 +117,8 @@
 // const result = addPrices(6, 7);
 // console.log('Total: $' + result);
 
+
+// ------------------------ arrays & objects ------------------------
 
 // const fruit = ['apple', 'banana', 'orange'];
 // console.log(fruit[2]);
@@ -142,6 +151,8 @@
 //     console.log('I pick ' + color);
 // }
 
+
+// ------------------------ changing the page ------------------------
 
 // const paragraph = document.getElementById('myParagraph');
 
@@ -180,6 +191,8 @@
 
 // document.addEventListener('click', changeBackgroundColor);
 
+
+// ------------------------ background colors with setTimeout ------------------------
 
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple'];
 

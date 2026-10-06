@@ -4,7 +4,7 @@ function changeColor(box) {
 }
 
 
-// ---------------------- mouse: the event happens on the box itself ----------------------
+// ------------------------ mouse: the event happens on the box itself ------------------------
 
 const clickBox = document.getElementById('clickBox');
 clickBox.addEventListener('click', function() {
@@ -47,7 +47,7 @@ mousemoveBox.addEventListener('mousemove', function() {
 });
 
 
-// ---------------------- keyboard: a div can't receive key presses, so the whole document listens ----------------------
+// ------------------------ keyboard: a div can't receive key presses, so the whole document listens ------------------------
 
 const keydownBox = document.getElementById('keydownBox');
 document.addEventListener('keydown', function() {
@@ -55,7 +55,7 @@ document.addEventListener('keydown', function() {
 });
 
 
-// ---------------------- inputs: the event happens on the input field ----------------------
+// ------------------------ inputs: the event happens on the input field ------------------------
 
 const inputBox = document.getElementById('inputBox');
 const inputField = document.getElementById('inputField');
@@ -64,7 +64,7 @@ inputField.addEventListener('input', function() {
 });
 
 
-// ---------------------- page and window: these happen to the whole page ----------------------
+// ------------------------ page and window: these happen to the whole page ------------------------
 
 const loadBox = document.getElementById('loadBox');
 window.addEventListener('load', function() {

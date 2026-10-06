@@ -1,4 +1,4 @@
-// // ---------------------- simple version of our image project, no timeout -----------------------
+// ------------------------ simple version of our image project, no timeout ------------------------
 
 // const images = [
 //     'images/154785067c16917dfafeed30dba5a5f8.jpg',
@@ -42,7 +42,7 @@
 // }
 
 
-// // ---------------------- adding image filters -----------------------
+// ------------------------ adding image filters ------------------------
 
 // const images = [
 //     'images/154785067c16917dfafeed30dba5a5f8.jpg',
@@ -90,7 +90,7 @@
 // }
 
 
-// // ---------------------- delaying image filters -----------------------
+// ------------------------ delaying image filters ------------------------
 
 // const images = [
 //     'images/154785067c16917dfafeed30dba5a5f8.jpg',
@@ -139,7 +139,7 @@
 // }
 
 
-// ---------------------- delaying image filters addImage -----------------------
+// ------------------------ delaying image filters addImage ------------------------
 
 const images = [
     'images/154785067c16917dfafeed30dba5a5f8.jpg',

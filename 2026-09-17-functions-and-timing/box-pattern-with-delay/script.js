@@ -1,4 +1,4 @@
-// –––––––––––––––––––––––– simple loop ––––––––––––––––––––––––
+// ------------------------ simple loop ------------------------
 
 
 // function addBox(ourRotation) { // parameters are a placeholder that holds whatever value gets passed in when function is called
@@ -16,7 +16,7 @@
 // }
 
 
-// –––––––––––––––––––––––– color added ––––––––––––––––––––––––
+// ------------------------ color added ------------------------
 // this function adds a new div, then changes the size, color and rotation.
 
 
@@ -49,7 +49,7 @@
 // }
 
 
-// // –––––––––––––––––––––––– and now with delay ––––––––––––––––––––––––
+// ------------------------ and now with delay ------------------------
 
 
 // function addBox(ourRotation, ourColor) {
@@ -84,7 +84,7 @@
 // }
 
 
-// // –––––––––––––––––––––––– let's make our parameters random and add an if statement ––––––––––––––––––––––––
+// ------------------------ let's make our parameters random and add an if statement ------------------------
 
 
 // function addBox(ourRotation, ourColor) {
@@ -112,7 +112,7 @@
 // }
 
 
-// // –––––––––––––––––––––––– let's make more parameters random and add delay ––––––––––––––––––––––––
+// ------------------------ let's make more parameters random and add delay ------------------------
 
 
 function addBox(ourRotation, ourColor, ourWidth, ourHeight) {

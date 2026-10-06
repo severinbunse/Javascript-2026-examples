@@ -25,7 +25,7 @@
 // }
 
 
-// // ---------------------- let's also make the border radius random -------------------------
+// ------------------------ let's also make the border radius random ------------------------
 
 
 // function addBox(ourWidth, ourHeight, ourColor, ourRotation, ourBorderRadius) { // new parameter
@@ -54,7 +54,7 @@
 // }
 
 
-// // ---------------------- let's add some timing -------------------------
+// ------------------------ let's add some timing ------------------------
 
 
 function addBox(ourWidth, ourHeight, ourColor, ourRotation, ourBorderRadius) {
@@ -85,4 +85,4 @@ for (let boxIndex = 0; boxIndex < 300; boxIndex = boxIndex + 1) {
 }
 
 
-// // -------------- next we will go to our image based code
+// ------------------------ next we will go to our image based code ------------------------
