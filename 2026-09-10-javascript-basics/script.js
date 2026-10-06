@@ -151,7 +151,7 @@
 
 // changeParagraph();
 
-// // now we change it's CSS
+// // now we change its CSS
 
 // function changeTextColorAndSize() {
 //     paragraph.style.color = 'red';
@@ -161,7 +161,7 @@
 
 // changeTextColorAndSize();
 
-// // now we change the backgroundcolor
+// // now we change the background color
 
 // const background = document.body;
 

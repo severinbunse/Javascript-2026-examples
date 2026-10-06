@@ -1,4 +1,4 @@
-// // let's go back to some simple colored diov gneration but let's pick out colors at random instead of using arrays. let's also add an if statement
+// // let's go back to some simple colored div generation but let's pick out colors at random instead of using arrays. let's also add an if statement
 
 // function addBox(ourWidth, ourHeight, ourColor, ourRotation) {
 //     const box = document.createElement('div');
@@ -48,7 +48,7 @@
 //     const randomHeight = Math.random() * 150 + 100;
 //     const randomRotation = Math.random() * 360;
 //     const randomColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
-//     const randomBorderRadius = Math.random() * 100; // new: creating border radius varable
+//     const randomBorderRadius = Math.random() * 100; // new: creating border radius variable
 
 //     addBox(randomWidth, randomHeight, randomColor, randomRotation, randomBorderRadius); // new: adding border radius argument
 // }

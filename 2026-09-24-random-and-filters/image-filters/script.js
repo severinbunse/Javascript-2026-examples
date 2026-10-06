@@ -1,4 +1,4 @@
-// // ---------------------- sinmple version of our image project, no timeout -----------------------
+// // ---------------------- simple version of our image project, no timeout -----------------------
 
 // const images = [
 //     'images/154785067c16917dfafeed30dba5a5f8.jpg',
@@ -26,7 +26,7 @@
 //     document.body.appendChild(image);
 // }
 
-// let imageIndex = 0; // we need this to tracks which image in the array to show next. We didn't need it with the colors because we didn't use an array this time but random color generation
+// let imageIndex = 0; // we need this to track which image in the array to show next. We didn't need it with the colors because we didn't use an array this time but random color generation
 
 
 // for (let imageCount = 0; imageCount < 30; imageCount = imageCount + 1) {
@@ -69,7 +69,7 @@
 //     image.style.transform = `rotate(${ourRotation}deg)`;
 //     document.body.appendChild(image);
 //     return image; // new: hand back a reference to the image we just created.
-//     // That call runs addImage, hits return image; at the end, and the value it returns (the <img> element) becomes the image variable in the loop. Then lines 92-93 use that same image variable directly
+//     // That call runs addImage, hits return image; at the end, and the value it returns (the <img> element) becomes the image variable in the loop. Then the lines after the call use that same image variable directly
 // }
 
 // let imageIndex = 0;
@@ -117,7 +117,7 @@
 //     image.style.transform = `rotate(${ourRotation}deg)`;
 //     document.body.appendChild(image);
 //     return image; // new: hand back a reference to the image we just created.
-//     // That call runs addImage, hits return image; at the end, and the value it returns (the <img> element) becomes the image variable in the loop. Then lines 92-93 use that same image variable directly
+//     // That call runs addImage, hits return image; at the end, and the value it returns (the <img> element) becomes the image variable in the loop. Then the lines after the call use that same image variable directly
 // }
 
 // let imageIndex = 0;
@@ -166,7 +166,7 @@ function addImage(ourSource, ourRotation) {
     image.style.transform = `rotate(${ourRotation}deg)`;
     document.body.appendChild(image);
     return image; // new: hand back a reference to the image we just created.
-    // That call runs addImage, hits return image; at the end, and the value it returns (the <img> element) becomes the image variable in the loop. Then lines 92-93 use that same image variable directly
+    // That call runs addImage, hits return image; at the end, and the value it returns (the <img> element) becomes the image variable in the loop. Then the lines after the call use that same image variable directly
 }
 
 let imageIndex = 0;

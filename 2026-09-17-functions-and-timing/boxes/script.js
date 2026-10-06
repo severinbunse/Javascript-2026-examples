@@ -1,8 +1,8 @@
 // –––––––––––––––––––––––– simple loop ––––––––––––––––––––––––
 
 
-// function addBox(ourRotation) { // parameters are a placeholder that holds whatever value get's passed in when function is called
-//     const box = document.createElement('div'); // create a variable inside a function when you need something fresh/local each time the function runs — like a new box per call here. create.Element only makes a new div in memory, is not yet attached to the document tree.
+// function addBox(ourRotation) { // parameters are a placeholder that holds whatever value gets passed in when function is called
+//     const box = document.createElement('div'); // create a variable inside a function when you need something fresh/local each time the function runs — like a new box per call here. createElement only makes a new div in memory, is not yet attached to the document tree.
 //     box.style.width = '250px';
 //     box.style.height = '250px';
 //     box.style.backgroundColor = 'black';
@@ -11,21 +11,21 @@
 // }
 
 
-// for (let boxIndex = 0; boxIndex < 300; boxIndex++) { // could have also been(let i = 0; i < 300; i++)
-//     addBox(boxIndex * 22.5); // calling the function. It recognoses th eparameters by position in (), the parameter names only exist within  the function. (boxIndex * 22.5) follows the smae function as the timeout function last class. The multiplication just scales whatever that current number is: on iteration 0, 0 * 22.5 = 0°; iteration 1, 1 * 22.5 = 22.5°; iteration 2, 2 * 22.5 = 45°; and so on.
+// for (let boxIndex = 0; boxIndex < 300; boxIndex++) { // could have also been (let i = 0; i < 300; i++)
+//     addBox(boxIndex * 22.5); // calling the function. It recognizes the parameters by position in (), the parameter names only exist within the function. (boxIndex * 22.5) follows the same function as the timeout function last class. The multiplication just scales whatever that current number is: on iteration 0, 0 * 22.5 = 0°; iteration 1, 1 * 22.5 = 22.5°; iteration 2, 2 * 22.5 = 45°; and so on.
 // }
 
 
 // –––––––––––––––––––––––– color added ––––––––––––––––––––––––
-// this functions adds a new div, then changes the size, color and rotation.
+// this function adds a new div, then changes the size, color and rotation.
 
 
-// function addBox(ourRotation, ourColor) { // CHANGED: added a second parameter, ourColor of being fixed
+// function addBox(ourRotation, ourColor) { // CHANGED: added a second parameter, ourColor instead of being fixed
 //     const box = document.createElement('div');
 
 //     box.style.width = '250px';
 //     box.style.height = '250px';
-//     box.style.backgroundColor = ourColor; // CHANGED: was hardcoded to 'black' before, now uses the ourColor parameter — this here is still out parameter
+//     box.style.backgroundColor = ourColor; // CHANGED: was hardcoded to 'black' before, now uses the ourColor parameter — this here is still our parameter
 //     box.style.transform = `rotate(${ourRotation}deg)`;
 //     document.body.appendChild(box);
 // }
@@ -74,7 +74,7 @@
 //         colorIndex = 0;
 //     }
 
-//     const currentColor = colors[colorIndex]; // store the current color in a variable to use inside the setTimeout callback because the colorIndex will change before the timeout executes.We grab currentColor right then — during the loop, before any delay — specifically because we want to lock in "what color is colorIndex pointing at right now" before the loop moves on and changes colorIndex for the next iteration.
+//     const currentColor = colors[colorIndex]; // store the current color in a variable to use inside the setTimeout callback because the colorIndex will change before the timeout executes. We grab currentColor right then — during the loop, before any delay — specifically because we want to lock in "what color is colorIndex pointing at right now" before the loop moves on and changes colorIndex for the next iteration.
 
 //     setTimeout(function() {
 //         addBox(boxIndex * 22.5, currentColor); // use the stored color instead of accessing the global colorIndex directly. because the setTimeout callback will execute after the loop has completed, the colorIndex will have changed, leading to unexpected results if we accessed it directly.
@@ -84,7 +84,7 @@
 // }
 
 
-// // –––––––––––––––––––––––– let's make our parameters random and and and if statement ––––––––––––––––––––––––
+// // –––––––––––––––––––––––– let's make our parameters random and add an if statement ––––––––––––––––––––––––
 
 
 // function addBox(ourRotation, ourColor) {

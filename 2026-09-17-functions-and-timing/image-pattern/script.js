@@ -31,7 +31,7 @@
 //         imageIndex = 0;
 //     }
 
-//     addImage(images[imageIndex]); // images is the array of image file path strings defined at the top (line 3), and imageIndex is a number (starting at 0, line 27) that tracks which one you want.
+//     addImage(images[imageIndex]); // images is the array of image file path strings defined at the top, and imageIndex is a number (starting at 0) that tracks which one you want.
 //     imageIndex++;
 // }
 
@@ -201,7 +201,7 @@ for (let imageCount = 0; imageCount < 30; imageCount++) {
 
 //     setTimeout(function() {
 //         const image = addImage(currentImage, Math.random() * 45 - 22.5); // new: capture the created image element
-//         image.style.transition = `filter 30s`; // new: tells the browser to animate any filter change over 5 seconds
+//         image.style.transition = `filter 30s`; // new: tells the browser to animate any filter change over 30 seconds
 //         setTimeout(function() {
 //             image.style.filter = `grayscale(1) sepia(1) hue-rotate(180deg)`; // new: the "aged" end state; browser animates smoothly toward this
 //         }, 50); // new: tiny delay so the browser registers the starting (no filter) state before the change, so it has something to transition from
@@ -210,7 +210,7 @@ for (let imageCount = 0; imageCount < 30; imageCount++) {
 // }
 
 
-// --------------------------- differetn way to write the code (easier to understand) ---------------------------
+// --------------------------- different way to write the code (easier to understand) ---------------------------
 
 // const images = [
 //     'images/154785067c16917dfafeed30dba5a5f8.jpg',

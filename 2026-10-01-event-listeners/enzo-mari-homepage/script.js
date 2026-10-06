@@ -11,7 +11,7 @@ const images = [
     'https://enzomari.com/content/1-images/scan-001.jpeg', // Caraffa Tribolata in Vetro, 1969
     'https://enzomari.com/content/1-images/00011.jpg', // Kurili, 1970
     'https://enzomari.com/content/1-images/043.jpg', // Sedia in plastica, 1971
-    'https://enzomari.com/content/1-images/00018.jpg', // Day-n ight, 1971
+    'https://enzomari.com/content/1-images/00018.jpg', // Day-night, 1971
     'https://enzomari.com/content/1-images/00010.jpg', // Dulband, 1973
     'https://enzomari.com/content/1-images/0006.jpeg', // Samos Model S, 1973
     'https://enzomari.com/content/1-images/scan-002.jpeg', // 16 Pesci, 1973

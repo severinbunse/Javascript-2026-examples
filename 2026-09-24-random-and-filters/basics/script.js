@@ -1,4 +1,4 @@
-// // ------------ create.Element() ----------------
+// // ------------ createElement() ----------------
 
 let newElement = document.createElement('div');
 

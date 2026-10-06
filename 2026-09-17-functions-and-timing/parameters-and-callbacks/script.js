@@ -9,7 +9,7 @@
 
 // // ------------------------------- Template literals -------------------------------
 
-// // our previous example included a string contentration.
+// // our previous example included a string concatenation.
 
 
 function faveGame(game) {
@@ -26,7 +26,7 @@ faveGame('skyrim');
 // myCar('Toyota', 'blue');
 
 
-// // ------------------------------- setTimout -------------------------------
+// // ------------------------------- setTimeout -------------------------------
 
 // // setTimeout(callback, delay);
 
@@ -42,7 +42,7 @@ faveGame('skyrim');
 // // callback = function used as an argument
 // // anonymous function = function without a name
 
-// // now instead of a callback funtion we use an anonymous function
+// // now instead of a callback function we use an anonymous function
 
 // setTimeout(function() {
 //     console.log('Hello');
