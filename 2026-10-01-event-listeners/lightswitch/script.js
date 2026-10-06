@@ -6,11 +6,11 @@ function changeImage() {
     const body = document.body;
 
     
-    if (image.getAttribute('src') === "images/lightOn.png") { 
-        image.src = "images/lightOff.png"; 
+    if (image.getAttribute('src') === "https://github.com/severinbunse/Javascript-2026/blob/main/images/lightOn.png?raw=true   ") { 
+        image.src = "https://github.com/severinbunse/Javascript-2026/blob/main/images/lightOff.png?raw=true   "; 
         body.style.backgroundColor = "black"; 
     } else { 
-        image.src = "images/lightOn.png"; 
+        image.src = "https://github.com/severinbunse/Javascript-2026/blob/main/images/lightOn.png?raw=true   "; 
         body.style.backgroundColor = "white"; 
     }
 }
