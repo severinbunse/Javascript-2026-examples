@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Types</title>
+
+    <style>
+
+        body {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+        }
+
+        #scrollBox {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    <!-- mouse -->
+    <div id="clickBox">click</div>
+    <div id="dblclickBox">dblclick</div>
+    <div id="mousedownBox">mousedown</div>
+    <div id="mouseupBox">mouseup</div>
+    <div id="mouseoverBox">mouseover</div>
+    <div id="mouseoutBox">mouseout</div>
+    <div id="mouseenterBox">mouseenter</div>
+    <div id="mousemoveBox">mousemove</div>
+
+    <!-- keyboard -->
+    <div id="keydownBox">keydown (press any key)</div>
+
+    <!-- inputs -->
+    <div id="inputBox">
+        input (type in the field)
+        <input id="inputField">
+    </div>
+
+    <!-- page and window -->
+    <div id="scrollBox">scroll (scroll the page)</div>
+    <div id="resizeBox">resize (change the window size)</div>
+    <div id="loadBox">load (fires once, when everything has loaded)</div>
+
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
