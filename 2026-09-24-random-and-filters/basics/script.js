@@ -1,16 +1,14 @@
-
-
-// // ------------create.Element()----------------
+// // ------------ create.Element() ----------------
 
 let newElement = document.createElement('div');
 
 console.log(newElement);
 
 
+// // ------------ setTimeout ----------------
 
-// // // ------------setTimeout----------------
+// function greet(name) {
+//     console.log(`Hello, ${name}!`);
+// }
 
-// function greet(name) { console.log(`Hello, ${name}!`); } 
-
-// setTimeout(greet, 3000, "Alice"); 
-
+// setTimeout(greet, 3000, "Alice");

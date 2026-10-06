@@ -4,7 +4,6 @@ function changeColor(box) {
 }
 
 
-
 // ---------------------- mouse: the event happens on the box itself ----------------------
 
 const clickBox = document.getElementById('clickBox');
@@ -48,14 +47,12 @@ mousemoveBox.addEventListener('mousemove', function() {
 });
 
 
-
 // ---------------------- keyboard: a div can't receive key presses, so the whole document listens ----------------------
 
 const keydownBox = document.getElementById('keydownBox');
 document.addEventListener('keydown', function() {
     changeColor(keydownBox);
 });
-
 
 
 // ---------------------- inputs: the event happens on the input field ----------------------
@@ -65,7 +62,6 @@ const inputField = document.getElementById('inputField');
 inputField.addEventListener('input', function() {
     changeColor(inputBox);
 });
-
 
 
 // ---------------------- page and window: these happen to the whole page ----------------------

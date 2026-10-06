@@ -1,5 +1,3 @@
-
-
 // console.log('Hello World!');
 
 // alert('Hello World!');
@@ -11,15 +9,13 @@
 
 // const temperature = 70;
 
-// if ( temperature < 60) {
+// if (temperature < 60) {
 //     document.body.style.backgroundColor = 'blue';
-//     console.log ('it is cold');
+//     console.log('it is cold');
 // } else {
 //     document.body.style.backgroundColor = 'red';
-//     console.log ('it is warm in here');
+//     console.log('it is warm in here');
 // }
-
-
 
 
 // const temperature = 25;
@@ -36,9 +32,8 @@
 // }
 
 
-
 // const temperature = 95;
-// const isSunny = true; 
+// const isSunny = true;
 
 // if (temperature <= 85 && isSunny) {
 //     document.body.style.backgroundColor = 'yellow';
@@ -54,10 +49,9 @@
 // const paragraph = document.getElementById('myParagraph');
 
 // if (isSunny || isSnowy) {
-//     paragraph.textContent = 'Love the weather!'
+//     paragraph.textContent = 'Love the weather!';
 //     console.log('the weather is great!');
 // }
-
 
 
 // const isLoggedIn = false;
@@ -65,11 +59,11 @@
 
 // if (!isLoggedIn) {
 //     paragraph.textContent = 'You are not logged in';
-//     console.log('Please log in to continue!')
+//     console.log('Please log in to continue!');
 // }
 
 
-// //Loops
+// // Loops
 // let count = 1;
 
 // while (count < 10) {
@@ -77,14 +71,13 @@
 //     count = count + 1;
 // }
 
-// for (let i = 1; i <= 10; i = i + 2) {   
-//     console.log(i); 
+// for (let i = 1; i <= 10; i = i + 2) {
+//     console.log(i);
 // }
 
 // for (let i = 10; i > 0; i--) {
 //     console.log(i);
 // }
-
 
 
 // let username = '';
@@ -96,36 +89,30 @@
 // console.log('Hello ' + username);
 
 
-
-// function greet () {
+// function greet() {
 //     console.log('Hello World');
 // }
 
 // greet();
 
 
-
-
-// function greetUser (username) {
-//     console.log ('Hello ' + username);
+// function greetUser(username) {
+//     console.log('Hello ' + username);
 // }
 
 // greetUser('Severin');
 
 
-
-// function addPrices (a,b) {
+// function addPrices(a, b) {
 //     return a + b;
 // }
 
-// const result = addPrices (6,7);
+// const result = addPrices(6, 7);
 // console.log('Total: $' + result);
 
 
 // const fruit = ['apple', 'banana', 'orange'];
 // console.log(fruit[2]);
-
-
 
 
 // const basket = ['apple', 'banana', 'orange'];
@@ -139,16 +126,15 @@
 // console.log(basket);
 
 
-// const user = { name: 'Toasty', age: '5', isStudent: true }
+// const user = { name: 'Toasty', age: '5', isStudent: true };
 
 // console.log(user.name);
 // console.log(user.age);
 
 
+// const pencilCase = ['red', 'blue', 'green', 'yellow'];
 
-// const pencilCase = [ 'red', 'blue', 'green', 'yellow'];
-
-// for (let i = 0; i < pencilCase.length; i++){
+// for (let i = 0; i < pencilCase.length; i++) {
 //     pickColor(pencilCase[i]);
 // }
 
@@ -157,7 +143,7 @@
 // }
 
 
-// const  paragraph = document.getElementById('myParagraph');
+// const paragraph = document.getElementById('myParagraph');
 
 // function changeParagraph() {
 //     paragraph.textContent = 'This is our updated paragraph';
@@ -165,9 +151,9 @@
 
 // changeParagraph();
 
-// // now we change it's CSS 
- 
-// function changeTextColorAndSize () {
+// // now we change it's CSS
+
+// function changeTextColorAndSize() {
 //     paragraph.style.color = 'red';
 //     paragraph.style.fontSize = '50px';
 //     paragraph.style.lineHeight = '0.8';
@@ -179,7 +165,7 @@
 
 // const background = document.body;
 
-// function changeBackgroundColor () {
+// function changeBackgroundColor() {
 //     background.style.backgroundColor = 'pink';
 // }
 
@@ -192,14 +178,13 @@
 //     document.body.style.backgroundColor = 'blue';
 // }
 
-// document.addEventListener('click', changeBackgroundColor)
-
+// document.addEventListener('click', changeBackgroundColor);
 
 
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple'];
 
-for (let i = 0; i < colors.length; i = i + 1 ) {
-    setTimeout(function (){
+for (let i = 0; i < colors.length; i = i + 1) {
+    setTimeout(function() {
         document.body.style.backgroundColor = colors[i];
     }, i * 1000);
 }

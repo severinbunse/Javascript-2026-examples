@@ -1,52 +1,43 @@
 // // last week we worked on this example:
 
-// function greetUser (username) {
-//     console.log ('Hello ' + username);
+// function greetUser(username) {
+//     console.log('Hello ' + username);
 // }
 
 // greetUser('Severin');
 
 
-// //-------------------------------Template literals-------------------------------
+// // ------------------------------- Template literals -------------------------------
 
 // // our previous example included a string contentration.
 
 
-
-
-
 function faveGame(game) {
-    console.log(`My favorite game is ${game}`)
+    console.log(`My favorite game is ${game}`);
 }
 
 faveGame('skyrim');
 
 
-
-
-
-
-// function myCar(brand, color){
+// function myCar(brand, color) {
 //     console.log(`${brand} is ${color}`);
 // }
 
 // myCar('Toyota', 'blue');
 
 
-
-
-// //-------------------------------setTimout-------------------------------
+// // ------------------------------- setTimout -------------------------------
 
 // // setTimeout(callback, delay);
 
 // function sayHello() {
 //     console.log('Hello');
-// };
+// }
 
-// setTimeout(sayHello, 2000); 
+// setTimeout(sayHello, 2000);
 
 
-// //-------------------------------anonymous function-------------------------------
+// // ------------------------------- anonymous function -------------------------------
 
 // // callback = function used as an argument
 // // anonymous function = function without a name
