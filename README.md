@@ -8,7 +8,7 @@ To download everything, click the green **Code** button on GitHub and choose **D
 
 | Date | Example | Demo | Code |
 |---|---|---|---|
-| Sep 3 | Click anywhere toggle | [demo](https://severinbunse.github.io/Javascript-2026-examples/2026-09-03-click-toggles/) | [code](https://github.com/severinbunse/Javascript-2026-examples/tree/main/2026-09-03-click-toggles) |
+| Sep 3 | Background toggle on click | [demo](https://severinbunse.github.io/Javascript-2026-examples/2026-09-03-background-toggle-on-click/) | [code](https://github.com/severinbunse/Javascript-2026-examples/tree/main/2026-09-03-background-toggle-on-click) |
 | Sep 10 | Conditionals, loops & functions | [demo](https://severinbunse.github.io/Javascript-2026-examples/2026-09-10-conditionals-loops-and-functions/) | [code](https://github.com/severinbunse/Javascript-2026-examples/tree/main/2026-09-10-conditionals-loops-and-functions) |
 | Sep 17 | Parameters, delay & functions | console only | [code](https://github.com/severinbunse/Javascript-2026-examples/tree/main/2026-09-17-functions-and-timing/parameters-delay-and-functions) |
 | Sep 17 | Box pattern with delay | [demo](https://severinbunse.github.io/Javascript-2026-examples/2026-09-17-functions-and-timing/box-pattern-with-delay/) | [code](https://github.com/severinbunse/Javascript-2026-examples/tree/main/2026-09-17-functions-and-timing/box-pattern-with-delay) |
