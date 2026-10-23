@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISS Tracker</title>
+
+<style>
+
+    body {
+        margin: 0;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* position: absolute lets JavaScript move it with left (see "move with the station" in script.js) */
+    #info {
+        position: absolute;
+        white-space: nowrap; /* keeps each line of text on one line near the right edge */
+    }
+
+</style>
+
+</head>
+<body>
+
+<div id="info">
+    <p id="latitude"></p>
+    <p id="longitude"></p>
+    <p id="country"></p>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
