@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Following Eyes</title>
+
+<style>
+
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        background-color: black;
+    }
+
+    .eye {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: white;
+    }
+
+    /* the pupil starts in the center: (200px eye - 80px pupil) / 2 = 60px */
+    .pupil {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: black;
+        top: 60px;
+        left: 60px;
+    }
+
+</style>
+
+</head>
+<body>
+
+<div class="eye"><div class="pupil"></div></div>
+<div class="eye"><div class="pupil"></div></div>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>

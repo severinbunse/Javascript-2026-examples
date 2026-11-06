@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saving a Word</title>
+
+</head>
+<body>
+
+<input id="word">
+
+<script>
+
+    const wordInput = document.querySelector('#word');
+
+    // wordInput.value is the text that's currently in the input field.
+    // When the page opens, put the saved word back in. The first time, nothing is saved yet, getItem gives back null and the field stays empty.
+    wordInput.value = localStorage.getItem('savedWord');
+
+    // The 'input' event fires every time the text changes, so each keystroke saves the word under the key 'savedWord'.
+    wordInput.addEventListener('input', function() {
+        localStorage.setItem('savedWord', wordInput.value);
+    });
+
+</script>
+
+
+</body>
+</html>

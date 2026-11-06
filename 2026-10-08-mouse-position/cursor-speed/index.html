@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Brush</title>
+
+<style>
+
+    body {
+        margin: 0;
+        height: 100vh;
+        overflow: hidden;
+        background-color: black;
+    }
+
+</style>
+
+</head>
+<body>
+
+
+
+<script>
+
+    document.addEventListener('mousemove', function(event) {
+        // movementX and movementY are how far the mouse moved since the last mousemove event (not where it is).
+        // They give the distance and the direction: moving 10 pixels left is -10, moving 10 pixels right is 10.
+        // Math.abs keeps the distance and throws away the direction, because moving left is just as fast as moving right.
+        const speed = Math.abs(event.movementX) + Math.abs(event.movementY);
+
+        // the faster the mouse moves, the lighter the blue. Anything above 100% lightness is just white
+        document.body.style.backgroundColor = `hsl(200, 100%, ${speed}%)`;
+    });
+
+
+</script>
+
+
+</body>
+</html>

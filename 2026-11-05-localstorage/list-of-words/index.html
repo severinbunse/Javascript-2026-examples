@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Words</title>
+
+</head>
+<body>
+
+<input id="wordInput">
+<button id="addButton">Add</button>
+<ul id="list"></ul>
+
+<script>
+
+    // 1. The things we need
+    const wordInput = document.querySelector('#wordInput');
+    const addButton = document.querySelector('#addButton');
+    const list = document.querySelector('#list');
+    let wordsArray = [];   // every word we add ends up in here
+
+
+    // 2. A function that shows one word in the list.
+    // We use it both for new words and for words loaded from localStorage.
+    function addWordToList(word) { // word is a parameter: its value is handed in each time we call the function (see steps 3 and 4)
+        const newListItem = document.createElement('li');
+        newListItem.textContent = word;
+        list.append(newListItem);
+    }
+
+
+    // 3. Adding and saving a word.
+    // localStorage only stores strings, so we turn the array into JSON text.
+    addButton.addEventListener('click', function() {
+        wordsArray.push(wordInput.value); // adds the typed text to the end of the array, like we did with colors before
+        addWordToList(wordInput.value); // calls addWordToList and hands it whatever is typed (the argument)
+        localStorage.setItem('savedWordsList', JSON.stringify(wordsArray)); // saves the whole list so far, as JSON text
+        wordInput.value = '';   // empty the input for the next word
+    });
+
+
+    // 4. Loading: when the page opens.
+    // The first time, nothing is saved yet and getItem gives back null, so we check first.
+    const savedJSON = localStorage.getItem('savedWordsList');
+
+    if (savedJSON) { // asks: "Is there anything saved?"
+        wordsArray = JSON.parse(savedJSON);   // turn the JSON text back into an array
+
+        wordsArray.forEach(function(savedWord) { // forEach runs this function once for each word in the array, handing it to savedWord
+            addWordToList(savedWord);
+        });
+    }
+
+</script>
+
+
+</body>
+</html>

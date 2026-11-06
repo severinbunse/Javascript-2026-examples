@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Field</title>
+
+<style>
+
+    body {
+        margin: 0;
+        height: 100vh;
+    }
+
+</style>
+
+</head>
+<body>
+
+
+
+<script>
+
+    document.addEventListener('mousemove', function(event) {
+        // clientX is how many pixels the mouse is from the left edge of the window, window.innerWidth is how wide the window is.
+        // Dividing one by the other gives 0 (left) to 1 (right); * 360 turns that into a hue (0-360)
+        const hue = (event.clientX / window.innerWidth) * 360;
+
+        // same idea going down: 0 (top) to 1 (bottom); * 100 turns that into a lightness from 0% (black) to 100% (white)
+        const lightness = (event.clientY / window.innerHeight) * 100;
+
+        // hsl() is hue, saturation, lightness. Saturation stays at 100%
+        document.body.style.backgroundColor = `hsl(${hue}, 100%, ${lightness}%)`;
+    });
+
+
+</script>
+
+
+</body>
+</html>
