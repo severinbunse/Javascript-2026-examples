@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Recognition</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        video {
+            width: 480px;
+            max-width: 100%;
+            display: block;
+        }
+    </style>
+
+</head>
+<body>
+
+<video autoplay muted playsinline></video>
+<p id="result">Loading the model…</p>
+
+<!-- Load the library. It adds an ml5 object to our page. -->
+<script src="https://cdn.jsdelivr.net/npm/ml5@1.4.0/dist/ml5.min.js"></script>
+
+<script>
+
+    const video = document.querySelector('video');
+    const result = document.querySelector('#result');
+
+    async function start() {
+
+        // 1. Ask for the webcam and show it in the <video> element.
+        // This only works through Live Server (or https), not by double-clicking the file.
+        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+        video.srcObject = stream;
+
+        // 2. Load a model that has already been trained to recognize about 1000 kinds of things.
+        // Loading takes a few seconds, so we wait for it, just like with fetch.
+        const classifier = await ml5.imageClassifier('MobileNet');
+
+        // 3. Keep classifying the video. Every time there's a new guess, gotResults runs.
+        classifier.classifyStart(video, gotResults);
+    }
+
+    // results is an array of guesses, best guess first.
+    // Each guess is an object with two keys: label and confidence (0 to 1).
+    function gotResults(results) {
+        const best = results[0];
+        const percent = Math.round(best.confidence * 100);
+        result.textContent = `${best.label} (${percent}%)`;
+    }
+
+    start();
+
+    // Docs: https://docs.ml5js.org/#/reference/image-classifier
+
+</script>
+
+</body>
+</html>
