@@ -3,76 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Falling box</title>
     <style>
-    body {
-        margin: 0;          /* remove the browser's default white border, so the canvas touches the edges */
-        overflow: hidden;   /* no scrollbars */
-    }
-</style>
+        body {
+            margin: 0;
+            overflow: hidden;   /* no scrollbars */
+        }
+    </style>
 </head>
 <body>
 
-<!-- Load the library. It adds a Matter object to our page with everything we need for physics. -->
-<!-- Link from jsdelivr.com: the library's npm name (matter-js), the version (@0.20.0), and the file (build/matter.min.js). -->
+<!-- STEP 1: Load the library. It adds a Matter object to our page. -->
 <script src="https://cdn.jsdelivr.net/npm/matter-js@0.20.0/build/matter.min.js"></script>
 
 <script>
 
-    // 1. THE ENGINE
-    // The engine is the physics world: it calculates gravity, movement and collisions.
-    // Matter is the library's namespace, Engine is the part for the physics world, create() makes a new one.
-    // Gravity is on by default, so we don't have to set it.
+    // STEP 2: The engine does the physics: gravity, movement, collisions.
     const engine = Matter.Engine.create();
 
-    // 2. THE RENDERER
-    // The engine only does the math. The renderer draws the result into a <canvas> on the page.
-    // We pass it an options object: keys chosen by the library, values chosen by us.
+    // STEP 3: The renderer draws the engine's world into a <canvas>.
+    // Docs: https://brm.io/matter-js/docs/
     const render = Matter.Render.create({
-        element: document.body,          // where to put the canvas: inside the <body>
-        engine: engine,                  // which physics world to draw (the one from step 1)
-        options: {                       // an object inside the object: settings for how it looks
-            width: window.innerWidth,    // canvas as wide as the browser window
-            height: window.innerHeight,  // canvas as tall as the browser window
-            wireframes: false,           // draw filled shapes. The default (true) draws outlines only.
-            background: 'white'          // the default is a dark navy
+        element: document.body,          // where to put the canvas
+        engine: engine,                  // which engine to draw
+        options: {
+            width: window.innerWidth,
+            height: window.innerHeight,
+            wireframes: false,           // filled shapes, not outlines
+            background: 'white'
         }
     });
 
-
-    // 3. THE BODIES
-    // Shortcuts for the window size, so the lines below stay readable.
+    // STEP 4: The bodies. x and y are the CENTER of a shape.
     const w = window.innerWidth;
     const h = window.innerHeight;
 
-    // Bodies.rectangle(x, y, width, height, options)
-    // x and y are the CENTER of the shape, not its top-left corner.
-    // The box starts in the middle of the window (w / 2), at the very top (0), and is 80 x 80 pixels.
+    // rectangle(x, y, width, height, options)
     const box = Matter.Bodies.rectangle(w / 2, 0, 80, 80, {
-        angle: 0.5,                          // starts tilted. Radians: 0.5 is about 30 degrees. Try 0 to drop it flat.
-        render: { fillStyle: 'royalblue' }   // its color. Another object inside the options object.
+        angle: 0.5,                      // tilt, in radians
+        restitution: 0.6,                // bounciness, 0 to 1
+        render: { fillStyle: 'royalblue' }
     });
 
-    // The ground: centered (w / 2), as wide as the window (w), 60 pixels tall.
-    // Its center sits 30 pixels above the bottom (h - 30), so the whole 60 pixels are visible.
     const ground = Matter.Bodies.rectangle(w / 2, h - 30, w, 60, {
-        isStatic: true,                      // static bodies never move: gravity doesn't pull them down
+        isStatic: true,                  // never moves
         render: { fillStyle: 'black' }
     });
 
-    // 4. START EVERYTHING
-    // Creating the bodies doesn't put them anywhere yet. Composite.add puts them into the physics world.
+    // STEP 5: Add the bodies to the world and start.
     Matter.Composite.add(engine.world, [box, ground]);
-
-    // Start drawing: the renderer redraws the canvas about 60 times per second.
-    Matter.Render.run(render);
-
-    // Start the physics clock: the runner moves the engine forward one step every frame.
-    // Without this line, everything is drawn but frozen in place.
-    Matter.Runner.run(Matter.Runner.create(), engine);
-
-    // The size is measured once when the page loads. Reload after resizing the window.
-    // Docs: https://brm.io/matter-js/docs/
+    Matter.Render.run(render);                            // start drawing
+    Matter.Runner.run(Matter.Runner.create(), engine);    // start the physics
 
 </script>
 
