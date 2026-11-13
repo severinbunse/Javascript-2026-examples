@@ -26,23 +26,22 @@
 
     const button = document.querySelector('button');
 
-    // STEP 2: Call the function.
-    // The simplest version: confetti() with no options. Uncomment to try it.
-    
-    // button.addEventListener('click', function() {
-    //     confetti();
-    // });
-
-    // STEP 3: Add options.
+    // STEP 2: Call the function with options. Uncomment to try it.
+    // confetti() works on its own too. Options change how it looks.
     // Options go inside { } as key: value pairs.
     // The library decides the keys (particleCount, spread, ...). We decide the values.
     // You can only find the keys in the docs: https://github.com/catdad/canvas-confetti
-    // Some to try inside confetti( ):
-    // confetti({ particleCount: 300, spread: 120 });
-    // confetti({ colors: ['red', 'blue'] });
-    // confetti({ origin: { x: 0, y: 1 }, angle: 60 });
 
-    // STEP 4: Use letters instead of confetti.
+    // button.addEventListener('click', function() {
+    //     confetti({
+    //         particleCount: 300,              // how many pieces
+    //         spread: 120,                     // how wide they fly, in degrees
+    //         colors: ['red', 'blue'],         // a list of colors
+    //         origin: { x: 0.5, y: 0.5 }       // where they start: 0 to 1 across and down the screen
+    //     });
+    // });
+
+    // STEP 3: Use letters instead of confetti.
     // shapeFromText() is another function from the library. It turns text into a confetti shape.
     // We make the shapes once here, not on every click.
     const size = 3;   // how big the letters are. We use it twice below, so we only change it here.
