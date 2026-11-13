@@ -39,9 +39,10 @@
     // Letters instead of confetti. Make the shapes once, before any clicks.
     // shapeFromText() is a method inside the confetti namespace.
     const size = 3;
-    const letterA = confetti.shapeFromText({ text: 'A', scalar: size });
-    const letterB = confetti.shapeFromText({ text: 'B', scalar: size });
-    const letterC = confetti.shapeFromText({ text: 'C', scalar: size });
+    // Text shapes ignore the colors option, so each letter gets its own color and font here.
+    const letterA = confetti.shapeFromText({ text: 'A', scalar: size, color: 'red', fontFamily: 'Times' });
+    const letterB = confetti.shapeFromText({ text: 'B', scalar: size, color: 'blue', fontFamily: 'Arial' });
+    const letterC = confetti.shapeFromText({ text: 'C', scalar: size, color: 'green', fontFamily: 'Courier' });
 
     // Step 2: call the function, now with an options object.
     // The keys (shapes, scalar, ...) are chosen by the library. The values are chosen by us.
