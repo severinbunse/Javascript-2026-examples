@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confetti</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+<button>Celebrate</button>
+
+<!-- Step 1: load the library. It adds a confetti() function to our page. -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+<script>
+
+    const button = document.querySelector('button');
+
+    // Simplest version: confetti with no options.
+    // button.addEventListener('click', function() {
+    //     confetti();
+    // });
+
+    // Read the docs to find the options: https://github.com/catdad/canvas-confetti
+    // Other things to try:
+    // confetti({ particleCount: 300, spread: 120 });
+    // confetti({ colors: ['#ff0000', '#0000ff'] });
+    // confetti({ origin: { x: 0, y: 1 }, angle: 60 });
+
+    // Letters instead of confetti. Make the shapes once, before any clicks.
+    // shapeFromText() is a method inside the confetti namespace.
+    const size = 3;
+    const letterA = confetti.shapeFromText({ text: 'A', scalar: size });
+    const letterB = confetti.shapeFromText({ text: 'B', scalar: size });
+    const letterC = confetti.shapeFromText({ text: 'C', scalar: size });
+
+    // Step 2: call the function, now with an options object.
+    // The keys (shapes, scalar, ...) are chosen by the library. The values are chosen by us.
+    button.addEventListener('click', function() {
+        confetti({
+            shapes: [letterA, letterB, letterC],
+            scalar: size,
+            particleCount: 50,
+            spread: 360,
+            ticks: 1000      // how long each piece lives, in frames (default 200)
+        });
+    });
+
+</script>
+
+</body>
+</html>
