@@ -18,41 +18,46 @@
 
 <button>Celebrate</button>
 
-<!-- Step 1: load the library. It adds a confetti() function to our page. -->
+<!-- STEP 1: Load the library.
+     This file was written by someone else. It adds a function called confetti() to our page. -->
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 
 <script>
 
     const button = document.querySelector('button');
 
-    // Simplest version: confetti with no options.
+    // STEP 2: Call the function.
+    // The simplest version: confetti() with no options. Uncomment to try it.
     // button.addEventListener('click', function() {
     //     confetti();
     // });
 
-    // Read the docs to find the options: https://github.com/catdad/canvas-confetti
-    // Other things to try:
+    // STEP 3: Add options.
+    // Options go inside { } as key: value pairs.
+    // The library decides the keys (particleCount, spread, ...). We decide the values.
+    // You can only find the keys in the docs: https://github.com/catdad/canvas-confetti
+    // Some to try inside confetti( ):
     // confetti({ particleCount: 300, spread: 120 });
-    // confetti({ colors: ['#ff0000', '#0000ff'] });
+    // confetti({ colors: ['red', 'blue'] });
     // confetti({ origin: { x: 0, y: 1 }, angle: 60 });
 
-    // Letters instead of confetti. Make the shapes once, before any clicks.
-    // shapeFromText() is a method inside the confetti namespace.
-    const size = 3;
-    // Text shapes ignore the colors option, so each letter gets its own color and font here.
+    // STEP 4: Use letters instead of confetti.
+    // shapeFromText() is another function from the library. It turns text into a confetti shape.
+    // We make the shapes once here, not on every click.
+    const size = 3;   // how big the letters are. We use it twice below, so we only change it here.
+
+    // Letters ignore the colors option, so each letter gets its own color and font.
     const letterA = confetti.shapeFromText({ text: 'A', scalar: size, color: 'red', fontFamily: 'Times' });
     const letterB = confetti.shapeFromText({ text: 'B', scalar: size, color: 'blue', fontFamily: 'Arial' });
     const letterC = confetti.shapeFromText({ text: 'C', scalar: size, color: 'green', fontFamily: 'Courier' });
 
-    // Step 2: call the function, now with an options object.
-    // The keys (shapes, scalar, ...) are chosen by the library. The values are chosen by us.
     button.addEventListener('click', function() {
         confetti({
-            shapes: [letterA, letterB, letterC],
-            scalar: size,
-            particleCount: 50,
-            spread: 360,
-            ticks: 1000      // how long each piece lives, in frames (default 200)
+            shapes: [letterA, letterB, letterC],   // the shapes to use, in a list [ ]
+            scalar: size,                          // the size, same as above (scalar means "multiplier")
+            particleCount: 50,                     // how many pieces
+            spread: 360,                           // how wide they fly, in degrees. 360 is a full circle.
+            ticks: 1000                            // how long they stay before fading. Default is 200.
         });
     });
 
